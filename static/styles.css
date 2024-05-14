@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  height: 95vh; /* Set body height to 100vh for full screen */
+}
+
+.container {
+  display: flex;
+  height: 100%; /* Inherit full height from body */
+}
+
+.sidebar {
+  width: 250px; /* Sesuaikan lebar sidebar */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-right: 20px; /* Add margin for spacing */
+  overflow: auto;
+}
+
+.openlibrary-logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.results-container {
+  flex: 1; /* Sisa ruang layar untuk hasil pencarian */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* Prevent overflow with overflow: auto; */
+  overflow: auto;
+}
+
+.book {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.book img {
+  width: 100px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.author {
+  font-style: italic;
+}
+
+.year {
+  font-style: italic;
+}
+
+.add-button {
+  margin-top: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Tampilkan sidebar di atas hasil pencarian */
+  }
+  .sidebar {
+    width: 100%; /* Sidebar full width */
+    margin-bottom: 20px; /* Tambahkan jarak di bawah sidebar */
+  }
+  .results-container {
+    padding: 10px; /* Kurangi padding untuk layar kecil */
+  }
+}
